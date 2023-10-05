@@ -42,40 +42,40 @@ public struct FineTune: Codable, Identifiable {
     }
 
     /// The ID of the Fine-tune job.
-    public let id: String
+    public let id: String? //
 
     /// The `OpenAIObject` object type of the Fine-tune job.
-    public let object: OpenAIObject
+    public let object: OpenAIObject? //
 
     /// The model used for the Fine-tune job.
-    public let model: String
+    public let model: String? //
 
     /// The creation date of the Fine-tune job.
-    public let createdAt: Int
+    public let createdAt: Int? //
 
     /// The array of events pertaining to the Fine-tune job.
-    public let events: [FineTuneEvent]?
+    public let events: [FineTuneEvent]? //
 
     /// Unknown functionality. TODO: Find function of parameter.
     public let fineTunedModel: String?
 
     /// The hyperparameters used for tweaking the Fine-tuned model.
-    public let hyperparams: FineTuneHyperparamters
+    public let hyperparams: FineTuneHyperparamters? //
 
     /// The organization ID associated with the Fine-tune.
-    public let organizationId: String
+    public let organizationId: String? //
 
     /// List of files associated with test metrics.
-    public let resultFiles: [File]
+    public let resultFiles: [File]? //
 
     /// The Fine-tune job status.
-    public let status: FineTuneStatus
+    public let status: FineTuneStatus? //
     
     /// The files used for editing hyperparameters for the Fine-tune model.
-    public let validationFiles: [File]
+    public let validationFiles: [File]? //
 
     /// The files used for training the Fine-tuned model.
-    public let trainingFiles: [File]
+    public let trainingFiles: [File]? //
 
     /// The most recent updated time of the Fine-tune job.
     public let updatedAt: Int?
