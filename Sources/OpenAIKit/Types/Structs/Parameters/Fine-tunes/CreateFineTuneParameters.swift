@@ -53,7 +53,7 @@ public struct CreateFineTuneParameters {
     public var model: String
 
     /// The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
-    public var nEpochs: Int
+    public var nEpochs: Int?
 
     /// The batch size to use for training.
     ///
@@ -86,7 +86,7 @@ public struct CreateFineTuneParameters {
     ///
     /// In order to compute classification metrics, you must provide a `validation_file`.
     /// Additionally, you must specify `classification_n_classes` for multiclass classification or `classification_positive_class` for binary classification.
-    public var computeClassificationMetrics: Bool
+    public var computeClassificationMetrics: Bool?
 
     /// The number of classes in a classification task.
     ///
