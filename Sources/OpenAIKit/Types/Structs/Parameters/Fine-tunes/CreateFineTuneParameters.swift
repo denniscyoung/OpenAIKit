@@ -86,7 +86,7 @@ public struct CreateFineTuneParameters {
     ///
     /// In order to compute classification metrics, you must provide a `validation_file`.
     /// Additionally, you must specify `classification_n_classes` for multiclass classification or `classification_positive_class` for binary classification.
-    public var computeClassificationMetrics: Bool
+//    public var computeClassificationMetrics: Bool
 
     /// The number of classes in a classification task.
     ///
@@ -121,7 +121,7 @@ public struct CreateFineTuneParameters {
         batchSize: Int? = nil,
         learningRateMultiplier: Double? = nil,
         promptLossWeight: Double = 0.01,
-        computeClassificationMetrics: Bool = false,
+//        computeClassificationMetrics: Bool = false,
         classificationNClasses: Int? = nil,
         classificationPositiveClass: String? = nil,
         classificationBetas: [Double]? = nil,
@@ -134,7 +134,7 @@ public struct CreateFineTuneParameters {
         self.batchSize = batchSize
         self.learningRateMultiplier = learningRateMultiplier
         self.promptLossWeight = promptLossWeight
-        self.computeClassificationMetrics = computeClassificationMetrics
+//        self.computeClassificationMetrics = computeClassificationMetrics
         self.classificationNClasses = classificationNClasses
         self.classificationPositiveClass = classificationPositiveClass
         self.classificationBetas = classificationBetas
@@ -147,8 +147,8 @@ public struct CreateFineTuneParameters {
             "training_file": self.trainingFile,
             "model": self.model,
             "n_epochs": self.nEpochs,
-            "prompt_loss_weight": self.promptLossWeight,
-            "compute_classification_metrics": self.computeClassificationMetrics
+            "prompt_loss_weight": self.promptLossWeight
+//            "compute_classification_metrics": self.computeClassificationMetrics
         ]
 
         if let validationFile = self.validationFile {
