@@ -72,6 +72,11 @@ final class OpenAIKitSession {
 //        }
         
         do {
+            // Convert to a string and print
+            if let JSONString = String(data: data, encoding: String.Encoding.utf8) {
+               print("$$$$$$$$$$ JSONString: \(JSONString)")
+            }
+            
             let decoded = try decoder.decode(type, from: data)
             print("$$$$$$$$$$ decoder:\(data)")
             return decoded
