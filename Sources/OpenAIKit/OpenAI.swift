@@ -236,7 +236,8 @@ extension OpenAI: OpenAIProtocol {
     }
 
     public func createFineTune(parameters param: CreateFineTuneParameters) async throws -> FineTune {
-        let serverUrl = try await getServerUrl(path: "/fine-tunes")
+//        let serverUrl = try await getServerUrl(path: "/fine-tunes")
+        let serverUrl = try await getServerUrl(path: "/fine_tuning/jobs")
         return try await OpenAIKitSession.shared.decodeUrl(
             with: serverUrl,
             apiKey: config.apiKey,
