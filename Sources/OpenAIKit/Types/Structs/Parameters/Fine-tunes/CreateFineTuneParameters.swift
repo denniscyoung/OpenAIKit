@@ -116,7 +116,7 @@ public struct CreateFineTuneParameters {
     public init(
         trainingFile: String,
         validationFile: String? = nil,
-        model: String = "gpt-3.5-turbo",
+        model: String = "gpt-3.5-turbo-0613",
         nEpochs: Int = 4,
         batchSize: Int? = nil,
         learningRateMultiplier: Double? = nil,
