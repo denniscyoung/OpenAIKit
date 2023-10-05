@@ -26,5 +26,5 @@
 /// The response struct itself when an error is thrown.
 public struct OpenAIErrorResponse: Error, Codable {
     /// The error object itself.
-    public let error: OpenAIErrorMessage
+    public let error: OpenAIErrorMessage?
 }
