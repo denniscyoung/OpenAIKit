@@ -78,7 +78,7 @@ public struct CreateFineTuneParameters {
     /// (as compared to the completion which always has a weight of 1.0), and can add a stabilizing effect to training when completions are short.
     ///
     /// If prompts are extremely long (relative to completions), it may make sense to reduce this weight so as to avoid over-prioritizing learning the prompt.
-    public var promptLossWeight: Double
+    public var promptLossWeight: Double?
 
     /// If set, we calculate classification-specific metrics such as accuracy and F-1 score using the validation set at the end of every epoch.
     ///
