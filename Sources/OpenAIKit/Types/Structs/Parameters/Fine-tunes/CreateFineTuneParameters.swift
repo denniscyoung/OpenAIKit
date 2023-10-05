@@ -147,7 +147,7 @@ public struct CreateFineTuneParameters {
             "training_file": self.trainingFile,
             "model": self.model,
 //            "n_epochs": self.nEpochs,
-            "prompt_loss_weight": self.promptLossWeight
+//            "prompt_loss_weight": self.promptLossWeight
 //            "compute_classification_metrics": self.computeClassificationMetrics
         ]
 
