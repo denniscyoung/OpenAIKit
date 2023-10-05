@@ -66,10 +66,21 @@ final class OpenAIKitSession {
         decoder.dataDecodingStrategy = dataDecodingStrategy
         decoder.dateDecodingStrategy = dateDecodingStrategy
 
-        guard let decoded = try? decoder.decode(type, from: data) else {
+//        guard let decoded = try? decoder.decode(type, from: data) else {
+//            print("$$$$$$$$$$ decoder:\(data)")
+//            throw try decoder.decode(OpenAIErrorResponse.self, from: data)
+//        }
+        
+        do {
+            let decoded = try decoder.decode(type, from: data)
+            print("$$$$$$$$$$ decoder:\(data)")
+            return decoded
+        } catch {
+            print("$$$$$$$$$$ decoder error:\(error)")
             throw try decoder.decode(OpenAIErrorResponse.self, from: data)
         }
-        return decoded
+        
+//        return decoded
     }
 
     /// Takes a `URL` input, along with header information, and converts it into a `URLRequest`;
