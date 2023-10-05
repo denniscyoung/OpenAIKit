@@ -54,7 +54,7 @@ public struct FineTune: Codable, Identifiable {
     public let createdAt: Int
 
     /// The array of events pertaining to the Fine-tune job.
-    public let events: [FineTuneEvent]
+    public let events: [FineTuneEvent]?
 
     /// Unknown functionality. TODO: Find function of parameter.
     public let fineTunedModel: String?
@@ -78,7 +78,7 @@ public struct FineTune: Codable, Identifiable {
     public let trainingFiles: [File]
 
     /// The most recent updated time of the Fine-tune job.
-    public let updatedAt: Int
+    public let updatedAt: Int?
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
