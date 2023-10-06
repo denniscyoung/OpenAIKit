@@ -86,21 +86,21 @@ public struct FineTune: Codable, Identifiable {
         self.id = try container.decode(String.self, forKey: .id)
         self.object = try container.decode(OpenAIObject.self, forKey: .object)
         self.model = try container.decode(String.self, forKey: .model)
-        self.createdAt = try container.decode(Int.self, forKey: .createdAt)
-        self.fineTunedModel = try container.decodeIfPresent(String.self, forKey: .fineTunedModel)
-        self.hyperparams = try container.decode(FineTuneHyperparamters.self, forKey: .hyperparams)
-        self.organizationId = try container.decode(String.self, forKey: .organizationId)
-        self.resultFiles = try container.decode([File].self, forKey: .resultFiles)
-        self.status = try container.decode(FineTuneStatus.self, forKey: .status)
-        self.validationFiles = try container.decode([File].self, forKey: .validationFiles)
-        self.trainingFiles = try container.decode([File].self, forKey: .trainingFiles)
-        self.updatedAt = try container.decode(Int.self, forKey: .updatedAt)
+//        self.createdAt = try container.decode(Int.self, forKey: .createdAt)
+//        self.fineTunedModel = try container.decodeIfPresent(String.self, forKey: .fineTunedModel)
+//        self.hyperparams = try container.decode(FineTuneHyperparamters.self, forKey: .hyperparams)
+//        self.organizationId = try container.decode(String.self, forKey: .organizationId)
+//        self.resultFiles = try container.decode([File].self, forKey: .resultFiles)
+//        self.status = try container.decode(FineTuneStatus.self, forKey: .status)
+//        self.validationFiles = try container.decode([File].self, forKey: .validationFiles)
+//        self.trainingFiles = try container.decode([File].self, forKey: .trainingFiles)
+//        self.updatedAt = try container.decode(Int.self, forKey: .updatedAt)
 
-        do {
-            let events = try container.decode([FineTuneEvent].self, forKey: .events)
-            self.events = events
-        } catch {
-            self.events = [FineTuneEvent]()
-        }
+//        do {
+//            let events = try container.decode([FineTuneEvent].self, forKey: .events)
+//            self.events = events
+//        } catch {
+//            self.events = [FineTuneEvent]()
+//        }
     }
 }
