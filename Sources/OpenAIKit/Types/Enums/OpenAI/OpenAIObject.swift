@@ -50,7 +50,7 @@ public enum OpenAIObject: String, Codable {
     case file
     
     /// A Fine-tune object.
-    case fineTune = "fine-tune"
+    case fineTune = "fine_tuning.job"
     
     /// A Fine-tune event object.
     case fineTuneEvent = "fine-tune-event"
