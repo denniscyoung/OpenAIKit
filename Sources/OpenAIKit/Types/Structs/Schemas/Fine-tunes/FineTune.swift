@@ -29,16 +29,16 @@ public struct FineTune: Codable, Identifiable {
         case id
         case object
         case model
-        case createdAt = "created_at"
-        case events
-        case fineTunedModel = "fine_tuned_model"
-        case hyperparams
-        case organizationId = "organization_id"
-        case resultFiles = "result_files"
-        case status
-        case validationFiles = "validation_files"
-        case trainingFiles = "training_files"
-        case updatedAt = "updated_at"
+//        case createdAt = "created_at"
+//        case events
+//        case fineTunedModel = "fine_tuned_model"
+//        case hyperparams
+//        case organizationId = "organization_id"
+//        case resultFiles = "result_files"
+//        case status
+//        case validationFiles = "validation_files"
+//        case trainingFiles = "training_files"
+//        case updatedAt = "updated_at"
     }
 
     /// The ID of the Fine-tune job.
