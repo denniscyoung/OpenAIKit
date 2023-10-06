@@ -51,34 +51,34 @@ public struct FineTune: Codable, Identifiable {
     public let model: String? //
 
     /// The creation date of the Fine-tune job.
-    public let createdAt: Int? //
-
-    /// The array of events pertaining to the Fine-tune job.
-    public let events: [FineTuneEvent]? //
-
-    /// Unknown functionality. TODO: Find function of parameter.
-    public let fineTunedModel: String?
-
-    /// The hyperparameters used for tweaking the Fine-tuned model.
-    public let hyperparams: FineTuneHyperparamters? //
-
-    /// The organization ID associated with the Fine-tune.
-    public let organizationId: String? //
-
-    /// List of files associated with test metrics.
-    public let resultFiles: [File]? //
-
-    /// The Fine-tune job status.
-    public let status: FineTuneStatus? //
-    
-    /// The files used for editing hyperparameters for the Fine-tune model.
-    public let validationFiles: [File]? //
-
-    /// The files used for training the Fine-tuned model.
-    public let trainingFiles: [File]? //
-
-    /// The most recent updated time of the Fine-tune job.
-    public let updatedAt: Int?
+//    public let createdAt: Int? //
+//
+//    /// The array of events pertaining to the Fine-tune job.
+//    public let events: [FineTuneEvent]? //
+//
+//    /// Unknown functionality. TODO: Find function of parameter.
+//    public let fineTunedModel: String?
+//
+//    /// The hyperparameters used for tweaking the Fine-tuned model.
+//    public let hyperparams: FineTuneHyperparamters? //
+//
+//    /// The organization ID associated with the Fine-tune.
+//    public let organizationId: String? //
+//
+//    /// List of files associated with test metrics.
+//    public let resultFiles: [File]? //
+//
+//    /// The Fine-tune job status.
+//    public let status: FineTuneStatus? //
+//    
+//    /// The files used for editing hyperparameters for the Fine-tune model.
+//    public let validationFiles: [File]? //
+//
+//    /// The files used for training the Fine-tuned model.
+//    public let trainingFiles: [File]? //
+//
+//    /// The most recent updated time of the Fine-tune job.
+//    public let updatedAt: Int?
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
